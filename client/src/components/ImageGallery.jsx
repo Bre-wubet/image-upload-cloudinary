@@ -48,10 +48,10 @@ const ImageGallery = () => {
       />
       <button
         onClick={() => handleDelete(image._id)}
-        className="absolute top-3 right-3 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md"
+        className="absolute top-3 right-3 bg-red-600 hover:bg-red-700 text-white p-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md"
         aria-label="Delete image"
       >
-        ×
+        x
       </button>
     </div>
   ))}
