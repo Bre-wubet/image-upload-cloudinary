@@ -1,6 +1,6 @@
 const express = require('express');
 const multer = require('multer');
-const { uploadImage, getAllImages, deleteImage } = require('../imageController');
+const { uploadImage, getAllImages, deleteImage } = require('./imageController');
 
 const router = express.Router();
 const upload = multer({ dest: 'uploads/' }); // Directory to temporarily store uploaded files

@@ -23,7 +23,8 @@ const UploadForm = () => {
     try {
       const res = await axios.post('/api/upload', formData);
       alert('Upload successful!');
-      console.log(res.data);
+      // Trigger a page reload to refresh the image gallery
+      window.location.reload();
     } catch (err) {
       alert('Upload failed!');
     } finally {

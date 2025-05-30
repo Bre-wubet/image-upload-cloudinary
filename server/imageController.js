@@ -1,5 +1,5 @@
-const image = require('../models/imageModel');
-const cloudinary = require('../cloudinary');
+const image = require('./imageModel');
+const cloudinary = require('./cloudinary');
 const fs = require('fs');
 
 const uploadImage = async (req, res) => {
@@ -44,7 +44,7 @@ const deleteImage = async (req, res) => {
         }
 
         await cloudinary.uploader.destroy(imageToDelete.publicId);
-        await imageToDelete.remove();
+        await image.findByIdAndDelete(id);
 
         res.status(200).json({ message: 'Image deleted successfully' });
     } catch (error) {
